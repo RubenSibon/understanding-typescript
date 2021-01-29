@@ -1,0 +1,24 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "description": "Exercises and notes for Understanding TypeScript by Maximilian Schwarzmüller on Udemy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenSibon/understanding-typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "ts"
+  ],
+  "author": "Ruben Sibon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RubenSibon/understanding-typescript/issues"
+  },
+  "homepage": "https://github.com/RubenSibon/understanding-typescript#readme"
+}
