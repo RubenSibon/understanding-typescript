@@ -2,7 +2,11 @@
 
 You do not have to assign a type to every constant or variable you create. In fact it is not considered good practice to do so, because TypeScript infers the type from the assigned value.
 
+<<<<<<< HEAD
 Only if you declare a variable without assigning a value is it good practice to assign the expected type to it.
+=======
+Only if you declare a variable without assigning a value is it good practice to assign the expected type to it like so:
+>>>>>>> 5dad604846c9194803041a7b02bcb312acd9996f
 
 ```ts
 // The type of the returned value is inferred from the mathematical operations on the arguments which are all numbers:
