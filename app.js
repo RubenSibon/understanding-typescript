@@ -1,11 +1,16 @@
-function add(a, b, print, text) {
-    var result = a + b;
-    return print
-        ? console.log("" + (text + " ") + result)
-        : result;
-}
-var num1 = 5;
-var num2 = 2.8;
-var printResult = true;
-var printText = "The result is";
-var result = add(num1, num2, printResult, printText);
+// Object with type inferrence (preferred).
+var personObj1 = {
+    name: "Ruben",
+    age: 34
+};
+// Object with explicit typing.
+var personObj2 = {
+    name: "Ruben",
+    age: 34
+};
+// Correct:
+console.log("personObj1", personObj1.name);
+console.log("personObj2", personObj2.name);
+// Error, property does not exist on type:
+console.log("personObj1", personObj1.nickname);
+console.log("personObj2", personObj2.nickname);

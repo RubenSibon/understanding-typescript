@@ -1,14 +1,22 @@
-function add(a: number, b: number, print?: boolean, text?: string) {
-  const result = a + b;
+// Object with type inferrence (preferred).
+const personObj1 = {
+  name: "Ruben",
+  age: 34,
+};
 
-  return print
-    ? console.log(`${text + " "}${result}`)
-    : result;
-}
+// Object with explicit typing.
+const personObj2: {
+  name: string;
+  age: number;
+} = {
+  name: "Ruben",
+  age: 34,
+};
 
-const num1 = 5;
-const num2 = 2.8;
-const printResult = true;
-const printText = "The result is";
+// Correct:
+console.log("personObj1", personObj1.name);
+console.log("personObj2", personObj2.name);
 
-const result = add(num1, num2, printResult, printText);
+// Error, property does not exist on type:
+console.log("personObj1", personObj1.nickname);
+console.log("personObj2", personObj2.nickname);
