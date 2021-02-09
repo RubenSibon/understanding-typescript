@@ -1,7 +1,10 @@
-function combine(input1: number | string, input2: number | string, convertAs = null) {
+type NumOrStr = number | string;
+type ConvertAsTypes = "number" | "string";
+
+function combine(input1: NumOrStr, input2: NumOrStr, convertAs: ConvertAsTypes = null) {
   const areNumbers = typeof input1 === "number" && typeof input2 === "number";
 
-  let result: string | number;
+  let result: NumOrStr;
 
   if (areNumbers && convertAs !== "string" || convertAs === "number") {
     result = Number(input1) + Number(input2);

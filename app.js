@@ -1,3 +1,4 @@
+"number" | "string";
 function combine(input1, input2, convertAs) {
     if (convertAs === void 0) { convertAs = null; }
     var areNumbers = typeof input1 === "number" && typeof input2 === "number";
