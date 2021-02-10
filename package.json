@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/RubenSibon/understanding-typescript/issues"
   },
-  "homepage": "https://github.com/RubenSibon/understanding-typescript#readme"
+  "homepage": "https://github.com/RubenSibon/understanding-typescript#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
 }

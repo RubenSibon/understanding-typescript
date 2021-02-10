@@ -1,3 +1,9 @@
+//
+// Basic types, inferrence, unision types, type aliases.
+//
+
+console.group("// Basic types, inferrence, unision types, type aliases.");
+
 type NumOrStr = number | string;
 type ConvertAsTypes = "number" | "string";
 
@@ -23,3 +29,25 @@ console.log(combinedAges2); // "71"
 
 const combinedNames = combine("Ruben", "Işıl");
 console.log(combinedNames); // "RubenIşıl"
+
+console.groupEnd();
+
+//
+// Return types.
+//
+
+console.group("// Return types.");
+
+function logToConsole(msg: string | number): void {
+  console.log("Logged:", msg);
+}
+logToConsole("The medium is the message.");
+
+function addUp(num1: number, num2: number) {
+  return num1 + num2; // The `number` type is inferred as the returned type.
+}
+console.log(addUp(4, 7));
+
+logToConsole(addUp(2, 6));
+
+console.groupEnd();
