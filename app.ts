@@ -46,8 +46,23 @@ logToConsole("The medium is the message.");
 function addUp(num1: number, num2: number) {
   return num1 + num2; // The `number` type is inferred as the returned type.
 }
-console.log(addUp(4, 7));
+console.log(addUp(4, 7)); // 11
 
-logToConsole(addUp(2, 6));
+logToConsole(addUp(3, 6)); // "Logged:" 9
+
+console.groupEnd();
+
+//
+// Function as Type
+//
+
+console.group("// Function types.");
+
+// let combineValues: Function; // Set the type of the value as `Function`
+let combineValues: (a: number, b: number) => number; // Pass a function with param and return types as a type.
+
+combineValues = addUp;
+
+console.log(combineValues(8, 8)); // 16
 
 console.groupEnd();
