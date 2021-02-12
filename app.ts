@@ -5,7 +5,7 @@
 console.group("// Basic types, inferrence, unision types, type aliases.");
 
 type NumOrStr = number | string;
-type ConvertAsTypes = "number" | "string";
+type ConvertAsTypes = "number" | "string" | null;
 
 function combine(input1: NumOrStr, input2: NumOrStr, convertAs: ConvertAsTypes = null) {
   const areNumbers = typeof input1 === "number" && typeof input2 === "number";

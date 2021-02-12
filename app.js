@@ -1,3 +1,4 @@
+"use strict";
 //
 // Basic types, inferrence, unision types, type aliases.
 //
