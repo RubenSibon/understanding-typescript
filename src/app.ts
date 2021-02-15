@@ -1,3 +1,5 @@
+console.group("APP");
+
 //
 // Basic types, inferrence, unision types, type aliases.
 //
@@ -64,5 +66,7 @@ let combineValues: (a: number, b: number) => number; // Pass a function with par
 combineValues = addUp;
 
 console.log(combineValues(8, 8)); // 16
+
+console.groupEnd();
 
 console.groupEnd();

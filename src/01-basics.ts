@@ -1,3 +1,5 @@
+console.group("01-BASICS");
+
 function add(a: number, b: number, print?: boolean, text?: string) {
   const result = a + b;
 
@@ -12,3 +14,5 @@ const printResult = true;
 const printText = "The result is";
 
 const result = add(num1, num2, printResult, printText);
+
+console.groupEnd();
