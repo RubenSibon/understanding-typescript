@@ -12,11 +12,11 @@ class OrgUnit {
     this.id = `id${Math.round(Math.random() * 100000)}`;
   }
 
-  getId() {
+  get getId() {
     return this.id;
   }
 
-  getName() {
+  get getName() {
     return this.name;
   }
 }
@@ -37,11 +37,11 @@ class Employee extends OrgUnit {
     this.id = `empl${this.name}${Math.round(Math.random() * 100000)}`;
   }
 
-  getDateStarted() {
+  get getDateStarted() {
     return this.dateStarted;
   }
 
-  getDateEnded() {
+  get getDateEnded() {
     return this.dateEnded;
   }
 }
@@ -69,7 +69,7 @@ class Department extends OrgUnit {
   }
 
   getEmployeeNames() {
-    return this.employees.map(empl => empl.getName());
+    return this.employees.map(empl => empl.getName);
   }
 
   getEmployeeInfo() {
@@ -101,7 +101,7 @@ console.log(deptMarketing.getEmployeeInfo());
 console.log("Instance 2 of a department:\n", deptAccounting.describe(), deptAccounting);
 console.log(deptAccounting.getEmployeeInfo());
 
-console.log(deptAccounting.getName(), deptAccounting.getId());
-console.log(emplRuben.getName(), emplRuben.getId());
+console.log(deptAccounting.getName, deptAccounting.getId);
+console.log(emplRuben.getName, emplRuben.getId);
 
 console.groupEnd();
