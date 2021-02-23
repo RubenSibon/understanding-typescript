@@ -20,3 +20,38 @@ interface Person {
 - One major difference: interfaces can _only_ be used to describe an object while `type` can be used for any type.
 - By using interfaces you are more explicit and it is clearer what is the intent.
 - Interfaces are good with classes.
+
+## Goes well with classes to share structure
+
+```ts
+interface Greetable {
+  name: string;
+
+  greet(phrase: string): void;
+}
+
+class Person implements Greetable {
+  name: string;
+  age: number;
+
+  constructor(
+    name: string,
+    age: number
+  ) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet(phrase: string) {
+    return `${phrase} ${this.name}`;
+  }
+}
+
+let user1: Greetable;
+
+// ...sometime later...
+
+user1 = new Person("Ruben", 34);
+
+console.log(user1.greet("Hello"));
+```
