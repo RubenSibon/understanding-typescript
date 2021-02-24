@@ -65,3 +65,12 @@ interface FnAdd {
   (a: number, b: number): number;
 }
 ```
+
+## Optional properties
+
+```ts
+interface Named {
+  name: string;
+  fullName?: string;
+}
+```
