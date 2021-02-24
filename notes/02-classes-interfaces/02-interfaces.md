@@ -55,3 +55,13 @@ user1 = new Person("Ruben", 34);
 
 console.log(user1.greet("Hello"));
 ```
+
+## Interfaces as Function Types
+
+Define a function's parameter and return types.
+
+```ts
+interface FnAdd {
+  (a: number, b: number): number;
+}
+```
