@@ -31,5 +31,5 @@ Example without objects. Any type can be combined (or intersected).
 type Input = string | number;
 type Numeric = number | boolean;
 
-type Universal = Combinable & Numeric; // Is of type `number` because that is the only intersection.
+type Universal = Input & Numeric; // Is of type `number` because that is the only intersection.
 ```
