@@ -35,6 +35,10 @@ function printUserInfo(user: User) {
   if ("privileges" in user) {
     console.log(`Privileges: ${user.privileges}`);
   }
+  // With instances of classes you could use the following type guard:
+  // if (user instanceof Newbie) {
+  //   console.log("Newbie!", user.startDate);
+  // }
 }
 
 const empl1: Newbie = {
