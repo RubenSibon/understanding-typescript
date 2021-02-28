@@ -1,3 +1,35 @@
 # What are generics?
 
 Generics are a feature that TypeScript has borrowed from other languages like C#. The concept does not exist in JavaScript and can only be utilized in TS.
+
+`Array` is a generic type. It itself does not convey something about the type of data inside the array.
+
+By using `Array<any>` or `any[]` you can be more specific.
+
+Another example of a generic type: `Promise`.
+
+A Generic Functions pattern:
+
+```ts
+function merge<T, U>(objA: T, objB: U) {
+  return Object.assign(objA, objB); // Returned value will be an intersection of "T" and "U".
+}
+
+const mergedObj = merge({ name: "Ruben" }, { age: 30 });
+
+console.log(mergedObj.age); // No error because type is inferred with generics.
+```
+
+With generic types we tell TS to expect some types that are unknown in advance.
+
+You can use type constraints to be more restrictive (recommended!):
+
+```ts
+function merge<T extends object, U extends object>(objA: T, objB: U) {
+  return Object.assign(objA, objB); // Returned value will be an intersection of "T" and "U".
+}
+
+const mergedObj = merge({ name: "Ruben" }, { age: 30 });
+
+console.log(mergedObj.age); // No error because type is inferred with generics.
+```
