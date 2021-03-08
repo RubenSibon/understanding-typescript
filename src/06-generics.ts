@@ -1,5 +1,11 @@
 console.group("06-GENERICS");
 
+//
+// Generics basics
+//
+
+console.group("Generics basics");
+
 // Array is a generic
 // const names1: Array = []; // Type error because `Array` is a generic type.
 const names2: Array<string> = ["Ruben", "Bennie", "Marian", "Alexander"];
@@ -61,4 +67,41 @@ console.log(extractAndConvert({ name: "Ruben", age: 34 }, "age"));
 console.log(extractAndConvert({ name: "Ruben", age: 34 }, "name"));
 // console.log(extractAndConvert({ name: "Ruben", age: 34 }, "job")); // Type error because "job" does not exist on the object passed in as the first parameters.
 
+console.groupEnd();
+
+
+//
+// Generic classes
+//
+
+console.group("Generic classes");
+
+// It is a good idea to only allow primitives due to objects being passed by reference.
+class DataStorage<T extends string | number> {
+  private data: T[] = [];
+
+  get getItems() {
+    return [...this.data];
+  }
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  removeItem(item: T) {
+    this.data.splice(this.data.indexOf(item), 1);
+  }
+}
+
+const textStorage = new DataStorage<string>();
+
+textStorage.addItem("Ruben");
+textStorage.addItem("Manu");
+console.log(textStorage.getItems);
+textStorage.addItem("Daan");
+console.log(textStorage.getItems);
+textStorage.removeItem("Manu");
+console.log(textStorage.getItems);
+
+console.groupEnd();
 console.groupEnd();
