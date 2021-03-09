@@ -11,6 +11,10 @@ function Logger(logString: string) {
   };
 }
 
+function Log(_: any, propName: string) {
+  console.log(`Prop "${propName}"`);
+}
+
 @Logger("LOGGING PERSON2")
 class Person2 {
   name = "Ruben";
@@ -41,17 +45,27 @@ function Template(template: string, hookId: string) {
   };
 }
 
+// Multiple decorators can be added.
+@Logger("LOGGING PERSON3")
 @Template("<h1>A person object has been created!</h1>", "app")
 class Person3 {
+  // Decorators can be added to class props.
+  @Log
   name: string;
 
   constructor(name: string) {
     this.name = name;
+  }
+
+  @Log
+  sayMyName() {
+    return `My name is ${this.name}`;
   }
 }
 
 const ruben = new Person3("Ruben");
 
 console.log(ruben);
+console.log(ruben.sayMyName());
 
 console.groupEnd();
