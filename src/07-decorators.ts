@@ -57,6 +57,7 @@ class Person3 {
     this.name = name;
   }
 
+  // Decorators can be added to class methods.
   @Log
   sayMyName() {
     return `My name is ${this.name}`;
