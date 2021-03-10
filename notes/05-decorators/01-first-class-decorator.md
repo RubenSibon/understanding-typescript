@@ -2,6 +2,8 @@
 
 A decorator is in the end just a function. It is a function that you apply to _something_ such as a `class`.
 
+Decorators run on class creation.
+
 ```ts
 // The `constructor` arg is the constructor function of the class that the decorator applies to.
 // Conventionally it is often called `target` as well.
