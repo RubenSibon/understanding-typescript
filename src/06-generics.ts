@@ -8,8 +8,8 @@ console.group("Generics basics");
 
 // Array is a generic
 // const names1: Array = []; // Type error because `Array` is a generic type.
-const names2: Array<string> = ["Ruben", "Bennie", "Marian", "Alexander"];
-const names3: string[] = ["Ruben", "Bennie", "Marian", "Alexander"];
+const names2: Array<string> = ["Ruben", "Daan", "Paul", "Alexander"];
+const names3: string[] = ["Ruben", "Daan", "Paul", "Alexander"];
 
 // Promise is a generic
 const promisedData: Promise<string> = new Promise((resolve, _) => {

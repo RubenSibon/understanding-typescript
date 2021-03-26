@@ -28,8 +28,8 @@ function combine(input1: number | string, input2: number | string) {
 const combinedAges = combine(34, 37);
 console.log(combinedAges); // 71
 
-const combinedNames = combine("Ruben", "Işıl");
-console.log(combinedNames); // "RubenIşıl"
+const combinedNames = combine("Ruben", "Sibon");
+console.log(combinedNames); // "RubenSibon"
 ```
 
 We need to do a manual type check in the function because the TS interpreter cannot know if both arguments are of the same type. It wants to either add up to numbers together or concatenate two strings.

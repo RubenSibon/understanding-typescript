@@ -29,8 +29,8 @@ console.log(combinedAges1); // "3437"
 const combinedAges2 = combine("34", "37", "number");
 console.log(combinedAges2); // "71"
 
-const combinedNames = combine("Ruben", "Işıl");
-console.log(combinedNames); // "RubenIşıl"
+const combinedNames = combine("Ruben", "Sibon");
+console.log(combinedNames); // "RubenSibon"
 
 console.groupEnd();
 
